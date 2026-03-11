@@ -16,7 +16,10 @@ import {
   X,
   Linkedin
 } from 'lucide-react';
-
+import sahil from './assests/sai.JPG';
+import raj from './assests/raj.jpg';
+import asif from './assests/asif.jpg';
+import anshul from './assests/anshul.jpeg';
 // --- Components ---
 
 const Navbar = () => {
@@ -396,10 +399,10 @@ const Schedule = () => {
 
 const Team = () => {
   const members = [
-    { name: "Alex Thorne", role: "Fest Head", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop" },
-    { name: "Sarah Ash", role: "Cultural Lead", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop" },
-    { name: "Marcus Flint", role: "Tech Head", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" },
-    { name: "Elena Blaze", role: "PR & Marketing", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop" },
+    { name: "D Sai Sahil", role: "President", image: sahil },
+    { name: "Mohammed Asif", role: "General Secretary", image: asif },
+    { name: "Sk RAj Ali", role: "Vice President", image: raj },
+    { name: "Anshul Kumar Parira", role: "Treasurer", image: anshul},
   ];
 
   return (
