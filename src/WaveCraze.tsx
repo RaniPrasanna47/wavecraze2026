@@ -16,12 +16,12 @@ import {
   X,
   Linkedin
 } from 'lucide-react';
-import sahil from './assests/sai.jpg';
-import raj from './assests/raj.jpg';
-import asif from './assests/asif.jpg';
-import anshul from './assests/anshul.jpeg';
-import talentxImg from './assests/talentx.jpeg';
-import aboutImg from './assests/about.jpg';
+import sahil from './assets/sai.jpg';
+import raj from './assets/raj.jpg';
+import asif from './assets/asif.jpg';
+import anshul from './assets/anshul.jpeg';
+import talentxImg from './assets/talentx.jpeg';
+import aboutImg from './assets/about.jpg';
 // --- Components ---
 
 const Navbar = () => {
@@ -377,7 +377,7 @@ const Schedule = () => {
           {days.map((day, i) => (
             <div key={i}>
               <div className="flex items-center gap-4 mb-8">
-                <span className="text-3xl font-display italic font-bold text-fire-red">{day.day}</span>
+                <span className="text-3xl font-display italic font-bold text-fire-red">{day.date}</span>
                 <div className="h-px flex-1 bg-fire-red/20" />
                 <span className="text-gray-500 uppercase tracking-widest font-bold text-sm">{day.date}</span>
               </div>
