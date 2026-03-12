@@ -16,11 +16,12 @@ import {
   X,
   Linkedin
 } from 'lucide-react';
-import sahil from './assests/sai.JPG';
+import sahil from './assests/sai.jpg';
 import raj from './assests/raj.jpg';
 import asif from './assests/asif.jpg';
 import anshul from './assests/anshul.jpeg';
 import talentxImg from './assests/talentx.jpeg';
+import aboutImg from './assests/about.jpg';
 // --- Components ---
 
 const Navbar = () => {
@@ -200,13 +201,15 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        <motion.button 
-          whileHover={{ scale: 1.05, backgroundColor: '#ff4d00', color: '#fff' }}
-          whileTap={{ scale: 0.95 }}
-          className="mt-12 px-10 py-4 border border-fire-red text-fire-red uppercase tracking-widest font-bold text-sm transition-all rounded-sm"
-        >
-          Register Now
-        </motion.button>
+        <a href="#events">
+  <motion.button 
+    whileHover={{ scale: 1.05, backgroundColor: '#ff4d00', color: '#fff' }}
+    whileTap={{ scale: 0.95 }}
+    className="mt-12 px-10 py-4 border border-fire-red text-fire-red uppercase tracking-widest font-bold text-sm transition-all rounded-sm"
+  >
+    Register Now
+  </motion.button>
+</a>
       </div>
 
       {/* Scroll Indicator */}
@@ -249,11 +252,10 @@ const About = () => {
         >
           <div className="absolute -inset-4 border border-fire-red/20 rounded-2xl -rotate-3" />
           <img 
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop" 
-            alt="Mountain fire" 
-            className="rounded-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
-            referrerPolicy="no-referrer"
-          />
+  src={aboutImg}
+  alt="About WaveCraze"
+  className="rounded-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
+/>
           <div className="absolute -bottom-6 -right-6 bg-fire-red p-8 rounded-2xl z-20 hidden md:block">
             <Flame size={40} className="text-white" />
           </div>
@@ -268,10 +270,11 @@ interface EventCardProps {
   category: string;
   icon: any;
   image: string;
+  link: string;
   key?: React.Key;
 }
 
-const EventCard = ({ title, category, icon: Icon, image }: EventCardProps) => {
+const EventCard = ({ title, category, icon: Icon, image, link }: EventCardProps) => {
   return (
     <motion.div 
       whileHover={{ y: -10 }}
@@ -291,9 +294,14 @@ const EventCard = ({ title, category, icon: Icon, image }: EventCardProps) => {
         </div>
         <p className="text-fire-red text-xs uppercase tracking-widest font-bold mb-2">{category}</p>
         <h4 className="text-2xl font-display italic font-bold mb-4">{title}</h4>
-        <button className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest group-hover:text-fire-red transition-colors">
-          View Details <ChevronRight size={16} />
-        </button>
+        <a 
+  href={link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest group-hover:text-fire-red transition-colors"
+>
+  Register Now <ChevronRight size={16} />
+</a>
       </div>
     </motion.div>
   );
@@ -301,8 +309,8 @@ const EventCard = ({ title, category, icon: Icon, image }: EventCardProps) => {
 
 const Events = () => {
   const events = [
-    { title: "Glam It Up", category: "", icon: Music, image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop" },
-    { title: "TalentX", category: "", icon: Zap, image: talentxImg },
+    { title: "Glam It Up", category: "", icon: Music, image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop",link: "https://forms.gle/your-glam-form" },
+    { title: "TalentX", category: "", icon: Zap, image: talentxImg, link: "https://docs.google.com/forms/d/e/1FAIpQLSdsSbAuMgzJKYlJ56c5IZhr5Hd-MhhLFR2jcfIi6MSriYGLrQ/viewform?usp=header" },
    
    // { title: "Firestorm Gaming", category: "Esports", icon: Zap, image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop" },
   ];
@@ -328,6 +336,7 @@ const Events = () => {
               category={event.category}
               icon={event.icon}
               image={event.image}
+              link={event.link}
             />
           ))}
         </div>
@@ -480,7 +489,6 @@ const Footer = () => {
             </div>
             <p className="text-gray-500 text-sm">
               https://www.radionitroz.in/<br />
-              +91 98765 43210
             </p>
           </div>
         </div>
