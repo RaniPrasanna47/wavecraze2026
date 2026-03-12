@@ -33,7 +33,7 @@ import sankar from './assets/shankar.jpg';
 import rishita from './assets/rish.jpg';
 import harshada from './assets/harsh.jpg';
 import sarmistha from './assets/sar.jpg';
-
+import bg1 from './assets/bg1.mp4';
 
 // ─── NAVBAR ───────────────────────────────────────────────────────────────────
 
@@ -126,12 +126,19 @@ const Hero = () => {
   const y1 = useTransform(scrollY, [0, 500], [0, 150]);
   return (
     <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-black">
-      <motion.div style={{ y: y1 }} className="absolute inset-0 z-0">
-        <img src={heroBg}
-          alt="Fire background" className="w-full h-full object-cover opacity-60 scale-110" referrerPolicy="no-referrer" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
-        <div className="absolute inset-0 ash-overlay" />
-      </motion.div>
+     <div className="absolute inset-0 z-0">
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover opacity-60"
+  >
+    <source src={bg1} type="video/mp4" />
+  </video>
+  <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
+  <div className="absolute inset-0 ash-overlay" />
+</div>
       <Embers />
       <div className="relative z-20 text-center px-4 sm:px-6 w-full max-w-5xl mx-auto">
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
