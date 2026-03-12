@@ -1,5 +1,11 @@
-import WaveCrazeApp from './WaveCraze';
+// main.tsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import WaveCrazeApp from './WaveCraze';  // or './App' depending on filename
+import './index.css';
 
-export default function App() {
-  return <WaveCrazeApp />;
-}
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <WaveCrazeApp />
+  </React.StrictMode>
+);
