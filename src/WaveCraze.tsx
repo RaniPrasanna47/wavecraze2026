@@ -20,6 +20,7 @@ import sahil from './assests/sai.JPG';
 import raj from './assests/raj.jpg';
 import asif from './assests/asif.jpg';
 import anshul from './assests/anshul.jpeg';
+import talentxImg from './assests/talentx.jpeg';
 // --- Components ---
 
 const Navbar = () => {
@@ -301,8 +302,8 @@ const EventCard = ({ title, category, icon: Icon, image }: EventCardProps) => {
 const Events = () => {
   const events = [
     { title: "Glam It Up", category: "", icon: Music, image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop" },
-    { title: "TalentX", category: "", icon: Zap, image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop" },
-    { title: "Comedy Night", category: "", icon: Wind, image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2070&auto=format&fit=crop" },
+    { title: "TalentX", category: "", icon: Zap, image: talentxImg },
+   
    // { title: "Firestorm Gaming", category: "Esports", icon: Zap, image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop" },
   ];
 
@@ -338,18 +339,18 @@ const Events = () => {
 const Schedule = () => {
   const days = [
     { 
-      day: "Day 01", 
+       
       date: "March 13", 
       events: [
-        { time: "10:00 AM", title: "Glam it Up", location: "SAC" },
+        { time: "6 :00 PM", title: "Glam it Up", location: "SAC" },
   
       ]
     },
     { 
-      day: "Day 02", 
-      date: "March 14", 
+      
+      date: "March 13", 
       events: [
-        { time: "11:00 AM", title: "TalentX", location: "SAC" },
+        { time: "7:30 PM", title: "TalentX", location: "SAC" },
     
       ]
     }
